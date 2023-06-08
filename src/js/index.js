@@ -1,12 +1,16 @@
-//import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+import { Navbar, Jumbotron, PresetCard } from "./component/home.jsx";
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
+function LandingPage() {
+  return (
+    <div>
+      <Navbar />
+      <Jumbotron />
+      <PresetCard />
+    </div>
+  );
+}
 
-//import your own components
-import Home from "./component/home.jsx";
+ReactDOM.render(<LandingPage />, document.querySelector("#app"));
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
